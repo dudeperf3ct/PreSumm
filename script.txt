@@ -1,0 +1,5 @@
+python train.py -task abs -mode test_text -batch_size 3000 -text_src ../raw_data/raw_src.txt -test_from ../baseline/cnndm_baseline_best.pt -log_file ../logs/test_abs_bert_cnndm -model_path MODEL_PATH -sep_optim true -use_interval true -visible_gpus 1 -max_pos 512 -max_length 200 -alpha 0.95 -min_length 50 -result_path ../results/res_abs_bert_raw
+
+
+python train.py -task ext -mode test_text -text_src ../raw_data/temp_ext.raw_src -test_from ../baseline/bertext_cnndm_transformer.pt -model_path MODEL_PATH -visible_gpus 1 -batch_size 3000  -log_file ../logs/test_ext_bert_cnndm -use_interval true -max_pos 512 -max_length 2000 -alpha 0.95 -min_length 50 -result_path ../results/test_ext_re -encoder baseline
+
