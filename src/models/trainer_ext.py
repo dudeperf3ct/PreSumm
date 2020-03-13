@@ -266,7 +266,7 @@ class Trainer(object):
                             _pred = ""
                             for i in selected_ids.squeeze():
                                 # print (i, sent[i])
-                                _pred += sent[i] + "."
+                                _pred += sent[i] + ".<q>"
                             pred.append(_pred)
                         else:
                             sent = batch.src_str[0][0].split(".")
@@ -274,7 +274,7 @@ class Trainer(object):
                             _pred = ""
                             for i in selected_ids[0]:
                                 # print (i, sent[i])
-                                _pred += sent[i] + "."
+                                _pred += sent[i] + ".<q>"
                             pred.append(_pred)                            
                         # for i, idx in enumerate(selected_ids):
                             
